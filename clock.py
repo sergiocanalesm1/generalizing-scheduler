@@ -6,7 +6,7 @@ sched = BlockingScheduler()
 
 @sched.scheduled_job('cron', day_of_week='mon', hour=17)
 def scheduled_job():
-    r = requests.post("https://generalizing-back-prod.herokuapp.com/api/challenges/")
+    r = requests.post("https://generalizing-back-test.herokuapp.com/api/challenges/")
     print(r.text)
 
 
